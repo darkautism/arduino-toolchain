@@ -6,6 +6,12 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform:
+          - { name: avr, tag: darkautism/arduino-toolchain:avr }
+          - { name: esp8266, tag: darkautism/arduino-toolchain:esp8266 }
+          - { name: esp32, tag: darkautism/arduino-toolchain:esp32 }
     steps:
       -
         name: Login to Docker Hub
@@ -23,6 +29,8 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
+          build-args: |
+            PLATFORM=${{ matrix.platform.name }}
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: darkautism/arduino-toolchain:latest
+          tags: ${{ matrix.platform.tag }}
