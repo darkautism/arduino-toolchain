@@ -1,5 +1,6 @@
 from alpine
 
+ARG PLATFORM
 WORKDIR /app
 COPY arduino-cli.yaml /app/arduino-cli.yaml
 RUN apk add curl --no-cache
