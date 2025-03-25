@@ -1,0 +1,23 @@
+
+directories:
+  data: /app
+  downloads: /app/staging
+  user: /app
+library:
+  enable_unsafe_install: false
+logging:
+  file: ""
+  format: text
+  level: info
+sketch:
+  always_export_binaries: false
+updater:
+  enable_notification: false
+board_manager:
+  additional_urls:
+    - https://espressif.github.io/arduino-esp32/package_esp32_index.json
+    - https://arduino.esp8266.com/stable/package_esp8266com_index.json
+    - https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json
+    - http://dl.sipeed.com/MAIX/Maixduino/package_Maixduino_k210_index.json
+    - https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+    - https://raw.githubusercontent.com/dbuezas/lgt8fx/master/package_lgt8fx_index.json
