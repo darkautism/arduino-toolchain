@@ -4,11 +4,11 @@ This project provides a Docker container with Arduino toolchains for compiling s
 ## Available Tags
 Pre-built images are hosted on [Docker Hub](https://hub.docker.com/r/darkautism/arduino-toolchain). The following tags are available:
 
-Tag | Description
----+--------------
-avr | Toolchain for AVR (e.g., ATmega328P on Arduino Uno)
-esp32 | Toolchain for ESP32 boards
-esp8266 | Toolchain for ESP8266 boards
+| Tag | Description |
+| ---|--------------|
+|avr | Toolchain for AVR (e.g., ATmega328P on Arduino Uno)|
+|esp32 | Toolchain for ESP32 boards|
+|esp8266 | Toolchain for ESP8266 boards|
 
 ## Using Pre-built Containers
 1. Install Docker
